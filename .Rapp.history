@@ -1,0 +1,25 @@
+source("https://gist.github.com/11282159.git")
+?source
+<code>source("https://gist.github.com/11282159.git")</code>
+source(<code>"https://gist.github.com/11282159.git"</code>)
+source("<code>https://gist.github.com/11282159.git</code>")
+library('devtools')
+source_gist("https://gist.github.com/11282159.git")
+source_gist("https://gist.github.com/11282159")
+ls
+ls()
+source_https("https://github.com/dalpozz/caret")
+source_https("https://github.com/dalpozz/caret/blob/master/crossVal.R\")
+source_https("https://github.com/dalpozz/caret/blob/master/crossVal.R")
+source_https("https://raw.githubusercontent.com/dalpozz/caret/master/crossVal.R")
+source_https("https://raw.githubusercontent.com/dalpozz/caret/master/trainCaret.R")
+source_https("https://raw.githubusercontent.com/dalpozz/caret/master/trainCaret.R")
+source_https
+source("https://www.dropbox.com/s/6yvyk9301fnxns3/confusion.R")
+source("https://www.dropbox.com/s/6yvyk9301fnxns3/confusion.R")
+source_https("https://www.dropbox.com/s/6yvyk9301fnxns3/confusion.R")
+source_https("https://www.dropbox.com/s/kht4jy2kp6w4yuw/pranker.R")
+source_https("https://www.dropbox.com/s/kht4jy2kp6w4yuw/pranker.R")
+source("https://www.dropbox.com/s/kht4jy2kp6w4yuw/pranker.R")
+require(devtools)#
+install_github("rDrop", "karthikram")

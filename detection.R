@@ -7,12 +7,9 @@
 library(ROCR)
 source(paste(path,"Code/plots.R",sep=""))
 library(PerfMeas)
-#source(paste(path,"Code/metrics/PerfMeas.R",sep=""))
 source(paste(path,"Code/cosine.R",sep=""))
 source(paste(path,"Code/metrics/confusion.R",sep="")) #mlearning packages
 source(paste(path,"Code/metrics/precision_recall.R",sep=""))
-source(paste(path,"Code/metrics/pr.auc.R",sep="")) #Miguel's code
-source(paste(path,"Code/metrics/pAUPRC.R",sep="")) #Miguel's code
 source(paste(path,"Code/metrics/pranker.R",sep="")) #Miguel's code
 source(paste(path,"Code/caret/confMatrix.R",sep="")) #code from caret
 
@@ -485,8 +482,6 @@ auprc <- function(phat, y, method = "ap", conf.level=0.95, conf.int.method = "bi
     pr <- pranker(phat, y)
     auc <- pr$auprc
     ci <- pr$conf.int
-    #auc <- pr.auc(phat, y, diagonal = 1)
-    #ci <- pAUPRC(auc, N, P)$quantiles
     pr <- list(area = auc, conf.int = ci, P = P, N = N)
   }
   if (m == "PerfMeas"){
@@ -1094,7 +1089,7 @@ AtosDetection=function(SCORE,phat.1,Yts,TS_COST,FPcost,metric="ap",verbose=T){
 
 
 #*********************
-#function tha show the confusion matrix and its metrics using the first X numb of obs with highest probability (phat)
+#function tha shows the confusion matrix and its metrics using the first X numb of obs with highest probability (phat)
 #return metrics for different number of top predictions considered (numPred2use)
 #*********************
 PredX<-function(phat,y,numPred2use,verbose=T){
